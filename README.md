@@ -2,4 +2,4 @@
 
 Premium dog care services you can trust
 
-![image][/public/mvp.png]
+![image][./public/mvp.png]
