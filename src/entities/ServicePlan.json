@@ -1,0 +1,35 @@
+{
+  "name": "ServicePlan",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Plan name"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "description": "Service duration in minutes"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price in dollars"
+    },
+    "description": {
+      "type": "string",
+      "description": "Plan description"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of plan features"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the plan is available for booking"
+    }
+  },
+  "required": ["name", "duration_minutes", "price"]
+}

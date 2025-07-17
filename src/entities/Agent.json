@@ -1,0 +1,53 @@
+{
+  "name": "Agent",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Agent's full name"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "Agent's photo URL"
+    },
+    "bio": {
+      "type": "string",
+      "description": "Short bio about the agent"
+    },
+    "rating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Agent rating out of 5"
+    },
+    "experience_years": {
+      "type": "number",
+      "description": "Years of experience with dogs"
+    },
+    "specializations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "puppies",
+          "senior_dogs",
+          "large_breeds",
+          "small_breeds",
+          "training",
+          "medical_needs"
+        ]
+      },
+      "description": "Agent specializations"
+    },
+    "hourly_rate": {
+      "type": "number",
+      "description": "Agent's base hourly rate"
+    },
+    "is_available": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the agent is currently available"
+    }
+  },
+  "required": ["name", "rating", "experience_years"]
+}

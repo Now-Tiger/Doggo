@@ -1,0 +1,57 @@
+{
+  "name": "Booking",
+  "type": "object",
+  "properties": {
+    "dog_id": {
+      "type": "string",
+      "description": "ID of the dog being cared for"
+    },
+    "agent_id": {
+      "type": "string",
+      "description": "ID of the assigned agent"
+    },
+    "service_plan_id": {
+      "type": "string",
+      "description": "ID of the selected service plan"
+    },
+    "scheduled_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the service"
+    },
+    "scheduled_time": {
+      "type": "string",
+      "description": "Time of the service (e.g. '14:30')"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "confirmed", "in_progress", "completed", "cancelled"],
+      "default": "pending",
+      "description": "Booking status"
+    },
+    "special_requests": {
+      "type": "string",
+      "description": "Any special requests for the service"
+    },
+    "total_price": {
+      "type": "number",
+      "description": "Total price for the service"
+    },
+    "address": {
+      "type": "string",
+      "description": "Service location address"
+    },
+    "completion_notes": {
+      "type": "string",
+      "description": "Notes from the agent after service completion"
+    }
+  },
+  "required": [
+    "dog_id",
+    "service_plan_id",
+    "scheduled_date",
+    "scheduled_time",
+    "total_price",
+    "address"
+  ]
+}
